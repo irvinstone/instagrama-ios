@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C0143AD92230340200FA48E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143AD82230340200FA48E9 /* AppDelegate.swift */; };
-		C0143ADB2230340200FA48E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143ADA2230340200FA48E9 /* ViewController.swift */; };
+		C0143ADB2230340200FA48E9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143ADA2230340200FA48E9 /* ListViewController.swift */; };
 		C0143ADE2230340200FA48E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0143ADC2230340200FA48E9 /* Main.storyboard */; };
 		C0143AE02230340300FA48E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0143ADF2230340300FA48E9 /* Assets.xcassets */; };
 		C0143AE32230340300FA48E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0143AE12230340300FA48E9 /* LaunchScreen.storyboard */; };
+		C0143AEC22303C0D00FA48E9 /* ListVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143AEB22303C0D00FA48E9 /* ListVC+CollectionView.swift */; };
+		C0143AEE223053F900FA48E9 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143AED223053F900FA48E9 /* ListCollectionViewCell.swift */; };
+		C0143AF0223054F800FA48E9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143AEF223054F800FA48E9 /* Post.swift */; };
+		C0143AF222305B0300FA48E9 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0143AF122305B0300FA48E9 /* ListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C0143AD52230340200FA48E9 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0143AD82230340200FA48E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0143ADA2230340200FA48E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0143ADA2230340200FA48E9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C0143ADD2230340200FA48E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0143ADF2230340300FA48E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0143AE22230340300FA48E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0143AE42230340400FA48E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0143AEB22303C0D00FA48E9 /* ListVC+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListVC+CollectionView.swift"; sourceTree = "<group>"; };
+		C0143AED223053F900FA48E9 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0143AEF223054F800FA48E9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C0143AF122305B0300FA48E9 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		C0143AD72230340200FA48E9 /* instagram */ = {
 			isa = PBXGroup;
 			children = (
+				C0143AEA22303B5D00FA48E9 /* List */,
 				C0143AD82230340200FA48E9 /* AppDelegate.swift */,
-				C0143ADA2230340200FA48E9 /* ViewController.swift */,
+				C0143ADA2230340200FA48E9 /* ListViewController.swift */,
 				C0143ADC2230340200FA48E9 /* Main.storyboard */,
 				C0143ADF2230340300FA48E9 /* Assets.xcassets */,
 				C0143AE12230340300FA48E9 /* LaunchScreen.storyboard */,
 				C0143AE42230340400FA48E9 /* Info.plist */,
 			);
 			path = instagram;
+			sourceTree = "<group>";
+		};
+		C0143AEA22303B5D00FA48E9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C0143AEB22303C0D00FA48E9 /* ListVC+CollectionView.swift */,
+				C0143AED223053F900FA48E9 /* ListCollectionViewCell.swift */,
+				C0143AEF223054F800FA48E9 /* Post.swift */,
+				C0143AF122305B0300FA48E9 /* ListService.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0143ADB2230340200FA48E9 /* ViewController.swift in Sources */,
+				C0143ADB2230340200FA48E9 /* ListViewController.swift in Sources */,
+				C0143AEC22303C0D00FA48E9 /* ListVC+CollectionView.swift in Sources */,
+				C0143AEE223053F900FA48E9 /* ListCollectionViewCell.swift in Sources */,
+				C0143AF222305B0300FA48E9 /* ListService.swift in Sources */,
 				C0143AD92230340200FA48E9 /* AppDelegate.swift in Sources */,
+				C0143AF0223054F800FA48E9 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
