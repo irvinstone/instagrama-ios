@@ -93,14 +93,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Login" image="login" id="nuE-2a-DGA">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="MPw-79-MZa" kind="show" id="3dz-yW-ic7"/>
+                                <segue destination="f4S-XT-kma" kind="presentation" id="3dz-yW-ic7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="listCollectionView" destination="GTt-NR-iG4" id="D3Z-35-EMj"/>
-                        <segue destination="REt-VE-AtY" kind="show" identifier="showDetail" id="rov-Je-eLZ"/>
+                        <segue destination="REt-VE-AtY" kind="show" identifier="showDetail" id="aIf-GL-rh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kO-Yn-xi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2778" y="99"/>
+            <point key="canvasLocation" x="3009" y="56"/>
         </scene>
         <!--Settings-->
         <scene sceneID="0TS-tk-en7">
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPm-WQ-mzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="769"/>
+            <point key="canvasLocation" x="1807" y="876"/>
         </scene>
         <!--List-->
         <scene sceneID="VZi-P2-gBW">
@@ -294,18 +294,14 @@
             </objects>
             <point key="canvasLocation" x="1075" y="769"/>
         </scene>
-        <!--View Controller-->
+        <!--Modal View Controller-->
         <scene sceneID="QWW-oX-Taq">
             <objects>
-                <viewController id="MPw-79-MZa" sceneMemberID="viewController">
+                <viewController id="MPw-79-MZa" customClass="ModalViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5M-wg-bkV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-wV-s7W">
-                                <rect key="frame" x="0.0" y="88" width="414" height="30"/>
-                                <state key="normal" title="Close"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="iy8-7b-3xJ">
                                 <rect key="frame" x="50" y="300" width="314" height="296"/>
                                 <subviews>
@@ -345,18 +341,40 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7g6-wV-s7W" firstAttribute="leading" secondItem="NVf-S8-9QV" secondAttribute="leading" id="3nY-NB-qYl"/>
                             <constraint firstItem="iy8-7b-3xJ" firstAttribute="centerX" secondItem="n5M-wg-bkV" secondAttribute="centerX" id="J5J-pF-dt3"/>
                             <constraint firstItem="iy8-7b-3xJ" firstAttribute="leading" secondItem="NVf-S8-9QV" secondAttribute="leading" constant="50" id="KFs-4N-1Pi"/>
-                            <constraint firstItem="NVf-S8-9QV" firstAttribute="trailing" secondItem="7g6-wV-s7W" secondAttribute="trailing" id="NRj-PR-7cU"/>
                             <constraint firstItem="NVf-S8-9QV" firstAttribute="trailing" secondItem="iy8-7b-3xJ" secondAttribute="trailing" constant="50" id="YT8-oZ-5nJ"/>
-                            <constraint firstItem="7g6-wV-s7W" firstAttribute="top" secondItem="NVf-S8-9QV" secondAttribute="top" id="mw7-q9-jtV"/>
                             <constraint firstItem="iy8-7b-3xJ" firstAttribute="centerY" secondItem="n5M-wg-bkV" secondAttribute="centerY" id="nbq-2q-cxY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NVf-S8-9QV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HzO-xJ-2Qd">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="Nju-Ig-fyY">
+                            <connections>
+                                <action selector="close:" destination="MPw-79-MZa" id="aWi-ma-6lk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYO-9N-cs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3686.9565217391305" y="-641.51785714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lvq-eS-3yv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f4S-XT-kma" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VEk-n4-dgY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MPw-79-MZa" kind="relationship" relationship="rootViewController" id="Kuy-L9-jWK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYp-nF-VhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2776.811594202899" y="-641.51785714285711"/>
         </scene>

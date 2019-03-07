@@ -22,13 +22,13 @@ class ListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showDetail" {
-            guard let data = sender as? Post else {
+            guard let indexPath = sender as? IndexPath else {
                 return
             }
             guard let detailVC  = segue.destination as? DetailViewController else {
                 return
             }
-            detailVC.post = data
+            detailVC.post = posts[indexPath.row]
         }
         
     }

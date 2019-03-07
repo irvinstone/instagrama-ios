@@ -21,6 +21,7 @@
 		C02E150B223169C9006B80BF /* SettingsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E150A223169C9006B80BF /* SettingsVC+TableView.swift */; };
 		C02E150D22316C74006B80BF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E150C22316C74006B80BF /* Setting.swift */; };
 		C02E150F22317028006B80BF /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E150E22317028006B80BF /* SettingsViewCell.swift */; };
+		C02E15112231AB8A006B80BF /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E15102231AB8A006B80BF /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C02E150A223169C9006B80BF /* SettingsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsVC+TableView.swift"; sourceTree = "<group>"; };
 		C02E150C22316C74006B80BF /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		C02E150E22317028006B80BF /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
+		C02E15102231AB8A006B80BF /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				C0143ADF2230340300FA48E9 /* Assets.xcassets */,
 				C0143AE12230340300FA48E9 /* LaunchScreen.storyboard */,
 				C0143AE42230340400FA48E9 /* Info.plist */,
+				C02E15102231AB8A006B80BF /* ModalViewController.swift */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				C02E150B223169C9006B80BF /* SettingsVC+TableView.swift in Sources */,
 				C0143ADB2230340200FA48E9 /* ListViewController.swift in Sources */,
 				C0143AEC22303C0D00FA48E9 /* ListVC+CollectionView.swift in Sources */,
+				C02E15112231AB8A006B80BF /* ModalViewController.swift in Sources */,
 				C0143AEE223053F900FA48E9 /* ListCollectionViewCell.swift in Sources */,
 				C0143AF222305B0300FA48E9 /* ListService.swift in Sources */,
 				C02E150F22317028006B80BF /* SettingsViewCell.swift in Sources */,
