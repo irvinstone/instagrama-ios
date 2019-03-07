@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class ListService {
     
@@ -20,5 +21,20 @@ class ListService {
         posts.append(Post(photo:#imageLiteral(resourceName: "img4") ,title:"IMG5", description:"imagen5",body:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"))
         return posts
     }
+//    static func makeRequest()-> Void {
+//
+//        let decoder = JSONDecoder()
+//        Alamofire.request("https://pre.services.urbania.pe/v2/search/announcement").responseJSON { response in
+//            do{
+//                if let json = response.result.value {
+//                    //let result = try decoder.decode(Post.self, from: json)
+//                }
+//
+//            }catch let err {
+//                print(err)
+//            }
+//        }
+//
+//    }
     
 }

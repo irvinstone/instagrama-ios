@@ -31,7 +31,23 @@ class ListViewController: UIViewController {
             detailVC.post = posts[indexPath.row]
         }
         
+        if segue.identifier == "modalSegue" {
+            guard let navigationController  = segue.destination as? UINavigationController else {
+                return
+            }
+            guard let modalView = navigationController.viewControllers.first as? LoginViewController else {
+                return
+            }
+            modalView.delegate = self
+        }
     }
+}
 
-
+extension ListViewController: LoginViewControllerDelegate {
+    func loginData(user: String, password: String) {
+        navigationItem.title = user
+        print(user)
+        print(password)
+    }
+    
 }

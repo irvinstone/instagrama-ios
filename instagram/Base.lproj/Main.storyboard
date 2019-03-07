@@ -93,7 +93,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Login" image="login" id="nuE-2a-DGA">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="lKa-JM-zlK" kind="show" id="3dz-yW-ic7"/>
+                                <segue destination="lKa-JM-zlK" kind="show" identifier="modalSegue" id="3dz-yW-ic7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -336,6 +336,9 @@
                                             <constraint firstAttribute="height" constant="40" id="Y04-BT-5DM"/>
                                         </constraints>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="login:" destination="MPw-79-MZa" eventType="touchUpInside" id="CNR-34-56M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -356,6 +359,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="nHV-xG-fl8" id="nmA-o3-6tq"/>
+                        <outlet property="userTextField" destination="rzA-hk-Jdn" id="sXh-Zw-Z4M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYO-9N-cs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
