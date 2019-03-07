@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 class Post {
     var photo: UIImage
+    var title: String
     var description: String
-    init(photo: UIImage,description: String) {
+    var body: String
+    init(photo: UIImage,title: String,description: String, body: String) {
         self.photo = photo
+        self.title = title
         self.description = description
+        self.body = body
     }
 }

@@ -18,6 +18,20 @@ class ListViewController: UIViewController {
         listCollectionView.dataSource = self
         listCollectionView.delegate = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetail" {
+            guard let data = sender as? Post else {
+                return
+            }
+            guard let detailVC  = segue.destination as? DetailViewController else {
+                return
+            }
+            detailVC.post = data
+        }
+        
+    }
 
 
 }

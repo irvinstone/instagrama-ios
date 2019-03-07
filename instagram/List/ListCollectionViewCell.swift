@@ -13,4 +13,6 @@ class ListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postLabel: UILabel!
     
+    
+    
 }
