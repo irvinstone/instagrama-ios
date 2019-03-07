@@ -10,7 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
-    var settings: [String] = []
     var settingsFull: [Setting] = []
     
     override func viewDidLoad() {
@@ -18,8 +17,7 @@ class SettingsViewController: UIViewController {
         settingsTableView.dataSource = self
         settingsTableView.delegate  = self
         settingsTableView.tableFooterView = UIView()
-        settings = ListService().getSettingsFields()
-        settingsFull = ListService().getSettings()
+        settingsFull = SettingsService.getSettings()
 
         // Do any additional setup after loading the view.
     }

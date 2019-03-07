@@ -21,6 +21,8 @@
 		C02E150B223169C9006B80BF /* SettingsVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E150A223169C9006B80BF /* SettingsVC+TableView.swift */; };
 		C02E150D22316C74006B80BF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E150C22316C74006B80BF /* Setting.swift */; };
 		C02E150F22317028006B80BF /* SettingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E150E22317028006B80BF /* SettingsViewCell.swift */; };
+		C02E15142231AD60006B80BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E15132231AD60006B80BF /* LoginViewController.swift */; };
+		C02E15172231B2A4006B80BF /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02E15162231B2A4006B80BF /* SettingsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		C02E150A223169C9006B80BF /* SettingsVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsVC+TableView.swift"; sourceTree = "<group>"; };
 		C02E150C22316C74006B80BF /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		C02E150E22317028006B80BF /* SettingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewCell.swift; sourceTree = "<group>"; };
+		C02E15132231AD60006B80BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C02E15162231B2A4006B80BF /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +76,12 @@
 		C0143AD72230340200FA48E9 /* instagram */ = {
 			isa = PBXGroup;
 			children = (
-				C02E150722316850006B80BF /* Settings */,
-				C02E1504223154E9006B80BF /* Details */,
+				C02E15152231B1F9006B80BF /* Services */,
+				C02E151A2231B501006B80BF /* Detail */,
+				C02E15192231B4EB006B80BF /* Settings */,
+				C02E15122231AD3F006B80BF /* Login */,
 				C0143AEA22303B5D00FA48E9 /* List */,
 				C0143AD82230340200FA48E9 /* AppDelegate.swift */,
-				C0143AF122305B0300FA48E9 /* ListService.swift */,
-				C0143ADA2230340200FA48E9 /* ListViewController.swift */,
 				C0143ADC2230340200FA48E9 /* Main.storyboard */,
 				C0143ADF2230340300FA48E9 /* Assets.xcassets */,
 				C0143AE12230340300FA48E9 /* LaunchScreen.storyboard */,
@@ -89,6 +93,7 @@
 		C0143AEA22303B5D00FA48E9 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				C0143ADA2230340200FA48E9 /* ListViewController.swift */,
 				C0143AEB22303C0D00FA48E9 /* ListVC+CollectionView.swift */,
 				C0143AED223053F900FA48E9 /* ListCollectionViewCell.swift */,
 				C0143AEF223054F800FA48E9 /* Post.swift */,
@@ -96,15 +101,24 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		C02E1504223154E9006B80BF /* Details */ = {
+		C02E15122231AD3F006B80BF /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C02E150522315548006B80BF /* DetailViewController.swift */,
+				C02E15132231AD60006B80BF /* LoginViewController.swift */,
 			);
-			name = Details;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		C02E150722316850006B80BF /* Settings */ = {
+		C02E15152231B1F9006B80BF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C0143AF122305B0300FA48E9 /* ListService.swift */,
+				C02E15162231B2A4006B80BF /* SettingsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C02E15192231B4EB006B80BF /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				C02E150822316872006B80BF /* SettingsViewController.swift */,
@@ -112,7 +126,15 @@
 				C02E150C22316C74006B80BF /* Setting.swift */,
 				C02E150E22317028006B80BF /* SettingsViewCell.swift */,
 			);
-			name = Settings;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C02E151A2231B501006B80BF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C02E150522315548006B80BF /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02E15142231AD60006B80BF /* LoginViewController.swift in Sources */,
 				C02E150D22316C74006B80BF /* Setting.swift in Sources */,
 				C02E150B223169C9006B80BF /* SettingsVC+TableView.swift in Sources */,
 				C0143ADB2230340200FA48E9 /* ListViewController.swift in Sources */,
@@ -193,6 +216,7 @@
 				C0143AEE223053F900FA48E9 /* ListCollectionViewCell.swift in Sources */,
 				C0143AF222305B0300FA48E9 /* ListService.swift in Sources */,
 				C02E150F22317028006B80BF /* SettingsViewCell.swift in Sources */,
+				C02E15172231B2A4006B80BF /* SettingsService.swift in Sources */,
 				C0143AD92230340200FA48E9 /* AppDelegate.swift in Sources */,
 				C0143AF0223054F800FA48E9 /* Post.swift in Sources */,
 				C02E150622315548006B80BF /* DetailViewController.swift in Sources */,

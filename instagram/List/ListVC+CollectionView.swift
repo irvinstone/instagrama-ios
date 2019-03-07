@@ -35,6 +35,6 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
 
 extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("asd")
+        performSegue(withIdentifier: "showDetail", sender: indexPath)
     }
 }
